@@ -3,10 +3,11 @@
 yarn init -y
 yarn add express
 yarn add uuidv4
+yarn add nodemailer
 
 yarn add typescript ts-node-dev -D
 yarn add @types/express -D
-
+yarn add @types/nodemailer -D
 
 yarn tsc --init
 ```

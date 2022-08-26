@@ -11,7 +11,7 @@ export class Project {
   constructor(props: Omit<Project, 'id'>, id?: string) {
     this.title = props.title
     this.description = props.description
-    this.image = props.title
+    this.image = props.image
     this.link = props.link
 
     if (!id) {

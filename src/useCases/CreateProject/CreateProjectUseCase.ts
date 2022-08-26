@@ -1,9 +1,13 @@
 import { Project } from '../../entities/Project'
+import { IMailProvider } from '../../providers/IMailProvider'
 import { IProjectsRepository } from '../../repositories/IProjectsRepository'
-import { ICreateProjectRequestDTO } from './CreateUserDTO'
+import { ICreateProjectRequestDTO } from './CreateProjectDTO'
 
 export class CreateProjectUseCase {
-  constructor(private projectsRepository: IProjectsRepository) {}
+  constructor(
+    private projectsRepository: IProjectsRepository,
+    private mailProvider: IMailProvider
+  ) {}
 
   async execute(data: ICreateProjectRequestDTO) {
     const projectAlreadyExists = this.projectsRepository.findByLink(data.link)
