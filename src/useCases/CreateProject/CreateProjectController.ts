@@ -4,7 +4,7 @@ import { CreateProjectUseCase } from './CreateProjectUseCase'
 export class CreateProjectController {
   constructor(private createProjectUseCase: CreateProjectUseCase) {}
 
-  async handle(req: Request, res: Response): Promise<Response> {
+  async create(req: Request, res: Response): Promise<Response> {
     const { title, description, image, link } = req.body
 
     try {

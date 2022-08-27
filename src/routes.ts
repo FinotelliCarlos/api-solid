@@ -9,8 +9,7 @@ router.get('/projects', (req, res) => {
 })
 
 router.post('/projects', (req, res) => {
-  //create a project
-  return createProjectController.handle(req, res)
+  return createProjectController.create(req, res)
 })
 
 router.get('/projects/:id', (req, res) => {
